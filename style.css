@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&family=Quicksand:wght@600&display=swap');
+*{
+    margin:0;
+    padding:0;
+   
+}
+
+section{
+    text-align: center;
+
+}
+
+
+.message{
+    background-color: rgba(96,116,141,255) ;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: larger;
+    text-align:center;
+    padding:7px;   
+ }
+p{
+    font-family: 'Quicksand', sans-serif;
+    text-align:center;
+    color:black;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 2,
+  'wght' 10000,
+  'GRAD' 20000,
+  'opsz' 1000
+}
+
+.box{
+    display: inline-block;
+    background-color: rgba(238,239,241,255);
+    font-family: 'Quicksand',sans-serif;
+    border-radius:0.5em;
+    width:50%;
+    margin: 15px;
+    text-align:center;
+    height: 53px;
+    padding-top :8px;
+    font-weight: 900;
+   }
+
+h3{
+    font-family:'Quicksand', sans-serif;
+    margin:25px;
+    
+}
+bold{
+    font-weight:bold;
+  
+}
+
+#button{
+
+    background-color: rgb(240,63,73);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    table-layout: fixed;
+    width: 300px;
+    font-family: 'Quicksand',sans-serif;
+    border-radius:0.3em;
+ 
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+#button:not(:disabled):hover {
+    transform: scale(1.05);
+  }
+  
+#button:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+  }
+  
+  #button:focus {
+    outline: 0 solid transparent;
+  }
+  
+#button:focus:before {
+    border-width: .125rem;
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
+  }
+  
+  #button:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+  
+  #button:not(:disabled):active {
+    transform: translateY(.125rem);
+  }
+
+
+container{
+   text-align:center;
+}
+@media only screen and (max-width: 620px) {
+ 
+ .box{
+    width:75%;
+    height: 75%;
+ }
+ #button{
+    width:200px;
+    
+ }
+ }
+ #loader {
+    border: 12px solid rgb(240,63,73);
+    border-radius: 50%;
+    border-top: 12px solid rgba(96,116,141,255);
+    width: 70px;
+    height: 70px;
+    animation: spin 10s linear infinite;
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+  
+  a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: rgb(240,63,73);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: rgb(240,63,73);
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+  
